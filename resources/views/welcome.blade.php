@@ -8,7 +8,8 @@
     <div class="row">
         <div class="col-md-6">
             <h3>Sing Up</h3>
-            <form action="#" method="post">
+            <form action="{{ route('signup') }}" method="post">
+                {{ csrf_field() }}
                 <div class="form-group">
                     <label for="email">Your E-mail</label>
                     <input  class="form-control" type="text" name="email" id="email">
@@ -28,6 +29,7 @@
         <div class="col-md-6">
             <h3>Sing In</h3>
             <form action="#" method="post">
+                {{ csrf_field() }}
                 <div class="form-group">
                     <label for="email">Your E-mail</label>
                     <input  class="form-control" type="text" name="email" id="email">
