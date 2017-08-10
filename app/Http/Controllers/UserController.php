@@ -38,6 +38,7 @@ class UserController extends Controller
 
     /**
      * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function postSignIn(Request $request)
     {
@@ -54,5 +55,16 @@ class UserController extends Controller
         }
         return redirect()->back();
     }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function getLogout()
+    {
+        Auth::logout();
+
+        return redirect()->route('home')->with(['message' => 'You are logged out!']);
+    }
+
 
 }
