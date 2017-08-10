@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getDashboard()
+    {
+        $posts = Post::all();
+        return view('dashboard', compact('posts'));
+    }
+
+    /**
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
