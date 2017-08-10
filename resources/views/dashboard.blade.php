@@ -8,11 +8,12 @@
     <section class="row new-post">
         <div class="col-md-6 col-md-offset-3">
             <header><h3>What do you want to say?</h3></header>
-            <form action="#">
+            <form action="{{ route('createpost') }}" method="post">
                 <div class="form-group">
-                    <textarea name="new-post" id="new-post" cols="30" rows="5" class="form-control" placeholder="Say something..."></textarea>
+                    <textarea name="body" id="body" cols="30" rows="5" class="form-control" placeholder="Say something..."></textarea>
                     <button type="submit" class="btn btn-primary">Create Post</button>
                 </div>
+                {{ csrf_field() }}
             </form>
         </div>
     </section>

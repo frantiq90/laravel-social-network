@@ -21,6 +21,7 @@ Route::post('/signin', 'UserController@postSignIn')->name('signin');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'UserController@getDashboard')->name('dashboard');
+    Route::post('/createpost', 'PostController@postCreatePost')->name('createpost');
 });
 
 

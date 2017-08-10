@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model implements Authenticatable
 {
     use \Illuminate\Auth\Authenticatable;
-}
 
-// Laravel 5.2 PHP Build a social network - Logging users in 5:34
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+}
