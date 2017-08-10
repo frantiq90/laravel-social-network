@@ -22,6 +22,7 @@ Route::post('/signin', 'UserController@postSignIn')->name('signin');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'PostController@getDashboard')->name('dashboard');
     Route::post('/createpost', 'PostController@postCreatePost')->name('createpost');
+    Route::post('/edit', 'PostController@postEditPost')->name('edit');
     Route::get('/delete-post/{post_id}', 'PostController@getDeletePost')->name('deletepost');
     Route::get('/logout', 'UserController@getLogout')->name('logout');
 });
