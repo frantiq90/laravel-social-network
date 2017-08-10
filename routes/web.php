@@ -13,10 +13,14 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::post('/signup', 'UserController@postSignUp')->name('signup');
 Route::post('/signin', 'UserController@postSignIn')->name('signin');
-Route::get('/dashboard', 'UserController@getDashboard')->name('dashboard');
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', 'UserController@getDashboard')->name('dashboard');
+});
 
 
