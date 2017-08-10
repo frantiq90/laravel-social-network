@@ -16,4 +16,7 @@ Route::get('/', function () {
 });
 
 Route::post('/signup', 'UserController@postSignUp')->name('signup');
+Route::post('/signin', 'UserController@postSignIn')->name('signin');
+Route::get('/dashboard', 'UserController@getDashboard')->name('dashboard');
+
 

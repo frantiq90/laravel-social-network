@@ -28,7 +28,7 @@
 
         <div class="col-md-6">
             <h3>Sing In</h3>
-            <form action="#" method="post">
+            <form action="{{ route('signin') }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="email">Your E-mail</label>
