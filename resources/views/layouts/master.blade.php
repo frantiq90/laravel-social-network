@@ -13,5 +13,14 @@
     <div class="container">
         @yield('content')
     </div>
+
+    <script
+            src="http://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script>
+        $('.error').delay(1000).fadeOut('slow');
+        $('.success').delay(1000).fadeOut('slow');
+    </script>
 </body>
 </html>
