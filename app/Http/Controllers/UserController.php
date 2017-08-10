@@ -66,5 +66,13 @@ class UserController extends Controller
         return redirect()->route('home')->with(['message' => 'You are logged out!']);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getAccount()
+    {
+        return view('account', ['user' => Auth::user()]);
+    }
+
 
 }

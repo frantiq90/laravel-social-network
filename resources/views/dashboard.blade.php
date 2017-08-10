@@ -9,7 +9,7 @@
     <section class="row new-post">
         <div class="col-md-6 col-md-offset-3">
             <header><h3>What do you want to say?</h3></header>
-            <form action="{{ route('createpost') }}" method="post">
+            <form action="{{ route('create.post') }}" method="post">
                 <div class="form-group">
                     <textarea name="body" id="body" cols="30" rows="5" class="form-control" placeholder="Say something..."></textarea>
                     <button type="submit" class="btn btn-primary">Create Post</button>
@@ -33,7 +33,7 @@
                         @if (Auth::user() == $post->user)
                             |
                             <a href="#" class="edit">Edit</a> |
-                            <a href="{{ route('deletepost', ['post_id' => $post->id]) }}">Delete</a>
+                            <a href="{{ route('delete.post', ['post_id' => $post->id]) }}">Delete</a>
                         @endif
                     </div>
                 </article>

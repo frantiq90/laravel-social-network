@@ -15,7 +15,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
-                    <li><a href="{{ route('dashboard') }}">[{{ Auth::user()->email }}]</a></li>
+                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ route('account') }}">[{{ Auth::user()->email }}]</a></li>
                     <li><a href="{{ route('logout') }}">Logout</a></li>
                 @endif
             </ul>
