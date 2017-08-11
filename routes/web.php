@@ -26,7 +26,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/delete-post/{post_id}', 'PostController@getDeletePost')->name('delete.post');
     Route::get('/logout', 'UserController@getLogout')->name('logout');
     Route::get('/account', 'UserController@getAccount')->name('account');
-    Route::get('/update-account', 'UserController@postSaveAccount')->name('account.save');
+    Route::post('/update-account', 'UserController@postSaveAccount')->name('account.save');
+    Route::get('/user-image/{filename}', 'UserController@getUserImage')->name('account.image');
 });
 
 
