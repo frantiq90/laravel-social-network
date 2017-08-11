@@ -16,4 +16,12 @@ class User extends Model implements Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

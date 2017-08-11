@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Like extends Model
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -15,10 +15,10 @@ class Post extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function likes()
+    public function post()
     {
-        $this->hasMany(Like::class);
+        return $this->belongsTo(Post::class);
     }
 }

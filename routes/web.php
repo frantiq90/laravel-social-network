@@ -28,6 +28,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/account', 'UserController@getAccount')->name('account');
     Route::post('/update-account', 'UserController@postSaveAccount')->name('account.save');
     Route::get('/user-image/{filename}', 'UserController@getUserImage')->name('account.image');
+    Route::post('/like', 'PostController@postLikePost')->name('like');
 });
 
 
